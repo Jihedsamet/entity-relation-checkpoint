@@ -1,0 +1,55 @@
+
+Entity relashion model:
+-------------------------------------------------------------------------------------------------------------------------
+Entities:
+Member
+
+MemberID (Primary Key)
+Last Name
+First Name
+Address
+Date of Birth
+Gender
+Gymnasium
+
+GymID (Primary Key)
+Gym Name
+Address
+Telephone Number
+Session
+
+SessionID (Primary Key)
+Sport Type
+Schedule
+Maximum Capacity (set to 20)
+GymID (Foreign Key referencing Gymnasium)
+Coach
+
+CoachID (Primary Key)
+Last Name
+First Name
+Age
+Specialty
+Relationships:
+Registers
+
+MemberID (Foreign Key referencing Member)
+SessionID (Foreign Key referencing Session)
+Leads
+
+CoachID (Foreign Key referencing Coach)
+SessionID (Foreign Key referencing Session)
+Belongs To
+
+SessionID (Foreign Key referencing Session)
+GymID (Foreign Key referencing Gymnasium)
+In this ER model:
+
+Member entity represents gym members.
+Gymnasium entity represents gym locations.
+Session entity represents workout sessions, each associated with a specific gymnasium.
+Coach entity represents coaches, who can lead multiple sessions.
+Registers relationship indicates which members are registered for which sessions.
+Leads relationship shows which coaches are leading which sessions.
+Belongs To relationship establishes the connection between sessions and gymnasiums.
+This model allows for tracking members, sessions, coaches, and their relationships while ensuring data integrity and efficient management of the gym chain's operations.
